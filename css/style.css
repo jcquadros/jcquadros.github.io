@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --primary: #4452FE;
+  --dark-background: #181818;
+  --secondary: #112D57;
+  --accent: #02E4C0;
+  --light-background: #ffffff;
+  --first-text: #000000;
+  --second-text: #5c5c5c;
+	--light-blue: #5972fc; 
+
+}
+
+body {
+  background-color: var(--dark-background); 
+  color: var(--light-background); 
+}
+
+.navbar .nav-item {
+  margin: 0 20px;
+}
+
+.navbar .nav-link {
+  color: var(--primary); 
+}
+
+.navbar .nav-link:hover {
+  color: var(--secondary); 
+}
+
+.navbar {
+  background-color: transparent; 
+  position: absolute; 
+  width: 100%; 
+  z-index: 10; 
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 50px 0;
+  background-image: url(../assets/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--light-background); 
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.836); 
+  z-index: 1;
+}
+
+.hero-title,
+.hero-description,
+.hero-image,
+.btn-contact,
+.hero-subtitle,
+.btn,
+.typing-container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  margin-bottom: 20px;
+  color: var(--light-background);
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  color: var(--light-background); 
+}
+
+.hero-image {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.typing-container {
+  display: inline;
+  font-family: monospace;
+  font-size: 3rem;
+  color: var(--light-background); 
+  position: relative;
+}
+
+.typing-container::after {
+  content: "";
+  display: inline-block;
+  width: 10px; 
+  height: 1.5rem;
+  background: var(--light-background);
+  animation: blink 1s infinite; 
+  margin-left: 5px; 
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    background: var(--light-background);
+  }
+  50% {
+    background: transparent;
+  }
+}
+
+.btn-contact{
+	background-color: var(--primary);
+	color: var(--light-background);
+}
+
+.btn-contact:hover{
+	background-color: var(--light-blue);
+}
+
+.scroll-down-arrow {
+	position: absolute;
+	z-index: 3;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -16px;
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 20px;
+	text-align: center;
+	color: #fff;
+}
+
+.hero-subtitle {
+	letter-spacing: 3px;
+	color: var(--primary);
+}
+
+
+
