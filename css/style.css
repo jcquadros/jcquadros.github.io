@@ -2,49 +2,52 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
 }
 
 :root {
-  --primary: #4452FE;
-  --dark-background: #181818;
-  --secondary: #112D57;
-  --accent: #02E4C0;
+  --primary: #351a88;
+  --dark-background: #161730;
+  --secondary: #3c6dd9;
+  --accent: #ff888f;
   --light-background: #ffffff;
   --first-text: #000000;
   --second-text: #5c5c5c;
-	--light-blue: #5972fc; 
-
+  --light-blue: #5972fc;
+  --linear-gradient: linear-gradient(120deg, #351A88 0%, #FF6654 30%);
 }
 
 body {
-  background-color: var(--dark-background); 
-  color: var(--light-background); 
+  background-color: var(--dark-background);
+  color: var(--light-background);
 }
 
 .navbar .nav-item {
-  margin: 0 20px;
+  margin: 0 30px; /* Aumenta o espaço entre os nav-items */
 }
 
 .navbar .nav-link {
-  color: var(--primary); 
+  color: var(--primary);
+  font-size: 1.2rem; /* Aumenta a fonte da navbar */
+  transition: color 0.3s ease, transform 0.3s ease; /* Adiciona uma transição suave para cor e transformação */
 }
 
 .navbar .nav-link:hover {
-  color: var(--secondary); 
+  color: var(--secondary);
+  transform: scale(1.1); /* Aumenta levemente o link ao passar o mouse */
 }
 
+
 .navbar {
-  background-color: transparent; 
-  position: absolute; 
-  width: 100%; 
-  z-index: 10; 
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
 }
 
 .hero {
   min-height: 100vh;
   padding: 50px 0;
-  background-image: url(../assets/hero.jpg);
+  /* background-image: url(../assets/hero.jpg); */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -52,11 +55,12 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: var(--light-background); 
+  color: var(--light-background);
   position: relative;
+  overflow: hidden;
 }
 
-.hero::before {
+/* .hero::before {
   content: "";
   position: absolute;
   top: 0;
@@ -65,7 +69,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.836); 
   z-index: 1;
-}
+} */
 
 .hero-title,
 .hero-description,
@@ -78,37 +82,33 @@ body {
   z-index: 2;
 }
 
-.hero-title {
-  margin-bottom: 20px;
-  color: var(--light-background);
-}
 
 .hero-description {
   font-size: 1.25rem;
   margin-bottom: 30px;
-  color: var(--light-background); 
+  color: var(--light-background);
 }
 
 .hero-image {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 30px 0px 100px  rgba(255, 136, 143, 0.5), -30px 0px 100px rgba(60, 109, 217, 0.5);
 }
 
 .typing-container {
   display: inline;
   font-family: monospace;
   font-size: 3rem;
-  color: var(--light-background); 
+  color: var(--light-background);
   position: relative;
 }
 
 .typing-container::after {
   content: "";
   display: inline-block;
-  width: 10px; 
+  width: 10px;
   height: 1.5rem;
   background: var(--light-background);
-  animation: blink 1s infinite; 
-  margin-left: 5px; 
+  animation: blink 1s infinite;
+  margin-left: 5px;
 }
 
 @keyframes blink {
@@ -121,32 +121,98 @@ body {
   }
 }
 
-.btn-contact{
-	background-color: var(--primary);
-	color: var(--light-background);
+.btn-contact {
+  background-color: var(--primary);
+  color: var(--light-background);
 }
 
-.btn-contact:hover{
-	background-color: var(--light-blue);
+.btn-contact:hover {
+  background-color: var(--light-blue);
 }
 
 .scroll-down-arrow {
-	position: absolute;
-	z-index: 3;
-	bottom: 20px;
-	left: 50%;
-	margin-left: -16px;
-	width: 32px;
-	height: 32px;
-	line-height: 32px;
-	font-size: 20px;
-	text-align: center;
-	color: #fff;
+  position: absolute;
+  z-index: 3;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -16px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
 }
 
-.hero-subtitle {
-	letter-spacing: 3px;
-	color: var(--primary);
+.hero-title {
+  letter-spacing: 3px;
+  background: var(--linear-gradient); /* Usa a variável de gradiente */
+  -webkit-background-clip: text; /* Faz o gradiente aplicar ao texto */
+  -webkit-text-fill-color: transparent; /* Torna o preenchimento do texto transparente */
+  background-clip: text; /* Para navegadores que não suportam o prefixo */
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--light-background);
+  border-radius: 0;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary);
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px var(--primary);
+}
+
+
+.textura-overlay {
+  position: absolute;
+  top: -20px; /* Ajuste conforme necessário */
+  left: 0px; /* Ajuste conforme necessário */
+  z-index: 1; /* Certifique-se de que fique acima do gradiente */
+  opacity: 0.9; /* Ajuste conforme necessário */
+  pointer-events: none;
+}
+
+
+.btn-gradient {
+  color: white;
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  border-radius: 0px;
+  background: linear-gradient(to left, var(--secondary), var(--accent));
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.btn-gradient::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  border-radius: 0px;
+  background-color: var(--dark-background);
+  z-index: -1;
+  transition: 200ms
+}
+.btn-gradient::after {
+  content: attr(data);
+  font-size: 16px;
+  background: linear-gradient(to left, var(--secondary), var(--accent));
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 200ms
+}
+
+.btn-gradient:hover{
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(255, 136, 143, 0.05), 0 4px 25px rgba(60, 109, 217, 0.05);
+
 }
 
 
