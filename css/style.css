@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 :root {
@@ -13,8 +14,12 @@
   --first-text: #000000;
   --second-text: #5c5c5c;
   --light-blue: #5972fc;
-  --linear-gradient: linear-gradient(120deg, #351A88 0%, #FF6654 30%);
+  --linear-gradient: linear-gradient(120deg, #351a88 0%, #ff6654 30%);
 }
+html {
+  scroll-padding-top: 40px; /* Ajuste este valor de acordo com a altura da sua navbar */
+}
+
 
 body {
   background-color: var(--dark-background);
@@ -36,12 +41,16 @@ body {
   transform: scale(1.1); /* Aumenta levemente o link ao passar o mouse */
 }
 
-
 .navbar {
   background-color: transparent;
-  position: absolute;
   width: 100%;
   z-index: 10;
+}
+
+.navbar.scrolled {
+backdrop-filter: blur(40px);
+background-color: rgba(22, 23, 48, 0.2); /* Adjust the color and opacity as needed */
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .hero {
@@ -60,31 +69,10 @@ body {
   overflow: hidden;
 }
 
-/* .hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.836); 
-  z-index: 1;
-} */
-
-/* .hero-title,
-.hero-description,
-.hero-image,
-.btn-contact,
-.hero-subtitle,
-.btn,
-.typing-container {
-  position: relative;
-  z-index: 2;
-} */
-
 
 .hero-image {
-  box-shadow: 30px 0px 100px  rgba(255, 136, 143, 0.5), -30px 0px 100px rgba(60, 109, 217, 0.5);
+  box-shadow: 30px 0px 100px rgba(255, 136, 143, 0.5),
+    -30px 0px 100px rgba(60, 109, 217, 0.5);
 }
 
 .typing-container {
@@ -160,7 +148,6 @@ body {
   box-shadow: 0 4px 15px var(--primary);
 }
 
-
 .textura-overlay {
   position: absolute;
   top: -20px; /* Ajuste conforme necessário */
@@ -169,7 +156,6 @@ body {
   opacity: 0.9; /* Ajuste conforme necessário */
   pointer-events: none;
 }
-
 
 .btn-gradient {
   color: white;
@@ -192,7 +178,7 @@ body {
   border-radius: 0px;
   background-color: var(--dark-background);
   z-index: -1;
-  transition: 200ms
+  transition: 200ms;
 }
 .btn-gradient::after {
   content: attr(data);
@@ -200,13 +186,13 @@ body {
   background: linear-gradient(to left, var(--secondary), var(--accent));
   -webkit-background-clip: text;
   color: transparent;
-  transition: 200ms
+  transition: 200ms;
 }
 
-.btn-gradient:hover{
+.btn-gradient:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(255, 136, 143, 0.05), 0 4px 25px rgba(60, 109, 217, 0.05);
-
+  box-shadow: 0 4px 15px rgba(255, 136, 143, 0.05),
+    0 4px 25px rgba(60, 109, 217, 0.05);
 }
 
 #about {
@@ -215,7 +201,6 @@ body {
   justify-content: center; /* Alinha o conteúdo horizontalmente ao centro */
   align-items: center; /* Alinha o conteúdo verticalmente ao centro */
 }
-
 
 #about p.lead {
   text-align: justify; /* Justifica o texto */
@@ -237,36 +222,95 @@ body {
   text-fill-color: transparent;
 }
 
-.divider{
+.divider {
   background: var(--linear-gradient);
   height: 2px;
   width: 80px;
+  display: block;
 }
 
-.card_my_experience{
+.card_my_experience {
   background-color: rgba(255, 255, 255, 0.1);
   text-align: center;
   padding: 32px 16px;
 }
 
 .card_my_experience .card-date {
-  background: #7543E3;
+  background: #7543e3;
   color: var(--light-background);
   padding: 4px 8px;
   border-radius: 50px;
   display: inline-block; /* Ajusta o background ao conteúdo */
-  box-shadow:  0 4px 30px var(--primary);
+  box-shadow: 0 4px 30px var(--primary);
 }
 
 .card_my_experience .card-title {
   color: var(--primary);
   font-size: 32px;
-  font-weight:bolder;
+  font-weight: bolder;
 }
 
-.card_my_experience 
-.card-text {
+.card_my_experience .card-text {
   color: #c5c8ec;
 }
 
+.featured-box {
+  box-sizing: border-box;
+  position: relative;
+  display: flex; 
+  align-items: center; 
+}
+
+.featured-box-icon {
+  margin-right: 15px;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  font-size: 30px;
+  text-align: center;
+  color: var(--light-background);
+  background-color: var(--primary);
+  border-radius: 50%;
+  box-shadow: 0 4px 15px var(--primary);
+}
+
+.featured-box-content {
+  flex: 1; 
+}
+
+#contact .fab {
+  color: var(--light-background); /* Ajuste a cor conforme seu design */
+  transition: color 0.3s ease;
+}
+
+#contact {
+  background-color: #131324;
+  color: var(--light-background);
+  padding: 50px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin-top: 40px;
+}
+
+#contact .fab:hover {
+  color: var(--primary); /* Cor ao passar o mouse sobre o ícone */
+}
+
+
+footer{
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#what-i-do {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
