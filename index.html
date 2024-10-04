@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio de Jullie Quadros, desenvolvedora web em formação. Experiência em Angular, Vue, Django, e mais."
+    />
+
     <title>Portfólio</title>
     <link
       rel="stylesheet"
@@ -20,9 +25,9 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="text-white">
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+    <nav id="nav" class="navbar navbar-expand-lg navbar-dark shadow-5-strong fixed-top">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Jullie Quadros</a>
+        <a class="navbar-brand fw-bold" href="#hero">Jullie Quadros</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -39,35 +44,30 @@
             <!-- Centraliza as opções -->
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a
-                  class="nav-link text-white"
-                  aria-current="page"
-                  href="#"
-                  style="border-radius: 50px"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
                 <a class="nav-link text-white" href="#about">Sobre</a>
               </li>
-							<li class="nav-item">
-								<a class="nav-link text-white" href="#what-i-do">O que eu faço</a>
-							</li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">Serviços</a>
+                <a class="nav-link text-white" href="#what-i-do">Serviços</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link text-white" href="#experience"
+                  >Experiência</a
+                >
+              </li>
+
+              <!-- <li class="nav-item">
                 <a class="nav-link text-white" href="#">Portfólio</a>
-              </li>
+              </li> -->
             </ul>
           </div>
-          <a class="btn btn-gradient ms-3 btn-lg" href="#">Contato</a>
+          <a class="btn btn-gradient ms-3 btn-lg" href="#contact">Contato</a>
           <!-- Botão Contato à direita -->
         </div>
       </div>
     </nav>
-
+		<main data-bs-spy="scroll" data-bs-target="#nav">
     <header
+      id="hero"
       class="hero d-flex flex-column align-items-center justify-content-center"
       style="height: 100vh"
     >
@@ -82,18 +82,18 @@
           <div
             class="col-lg-8 text-lg-start text-center my-4 d-flex flex-column justify-content-center"
           >
-            <h2 class="hero-title">Bem-vindo</h2>
-            <h3 class="typing-container" id="typingText"></h3>
+            <h1 class="hero-title">Bem-vindo</h1>
+            <h2 class="typing-container" id="typingText"></h2>
             <p class="lead my-4">
               Olá, sou Jullie, desenvolvedora web em formação. Crio aplicações
               web personalizadas e otimizadas para atender às necessidades de
               empresas e indivíduos.
             </p>
             <div class="d-flex">
-              <a href="#contato" class="btn btn-primary btn-lg px-5"
+              <a href="#contact" class="btn btn-primary btn-lg px-5"
                 >Contate-me</a
               >
-              <a href="#sobre" class="btn btn-gradient btn-lg px-5 ms-3"
+              <a href="#about" class="btn btn-gradient btn-lg px-5 ms-3"
                 >Sobre mim</a
               >
             </div>
@@ -125,8 +125,8 @@
     <section id="about">
       <div class="container">
         <div class="row justify-content-center align-items-center text-center">
-          <h1 class="fw-bold">Sobre mim</h1>
-					<span class="divider mb-5"></span>
+          <h2 class="fw-bold">Sobre mim</h2>
+          <span class="divider mb-5"></span>
         </div>
         <div class="row">
           <div class="col-lg-8 d-flex flex-column justify-content-center">
@@ -173,68 +173,224 @@
       </div>
     </section>
 
-		<section id="what-i-do" class="py-5">
+    <section id="what-i-do">
+      <div class="container">
+        <div class="row justify-content-center align-items-center text-center">
+          <h2 class="fw-bold">O que eu faço</h2>
+          <span class="divider mb-5"></span>
+        </div>
+        <div class="row">
+          <!-- Card 2 -->
+          <div class="col-md-6">
+            <div class="featured-box style-3 mb-5">
+              <div class="featured-box-icon">
+                <i class="fas fa-paint-brush"></i>
+              </div>
+              <div class="featured-box-content">
+                <h3 class="text-white">Design de Interfaces</h3>
+                <p class="text-white-50 mb-0">
+                  Criação de designs intuitivos e atraentes no Figma, focando na
+                  experiência do usuário e na estética visual.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-6">
+            <div class="featured-box style-3 mb-5">
+              <div class="featured-box-icon"><i class="fas fa-code"></i></div>
+              <div class="featured-box-content">
+                <h3 class="text-white">Desenvolvimento Web Completo</h3>
+                <p class="text-white-50 mb-0">
+                  Construção de websites completos, atraentes e responsivos.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-md-6">
+            <div class="featured-box style-3 mb-5">
+              <div class="featured-box-icon"><i class="fas fa-rocket"></i></div>
+              <div class="featured-box-content">
+                <h3 class="text-white">Desenvolvimento de Landing Pages</h3>
+                <p class="text-white-50 mb-0">
+                  Elaboração de landing pages atrativas e eficazes que convertem
+                  visitantes em clientes, utilizando práticas de design
+                  otimizadas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="py-5">
+      <div class="container">
+        <div class="row justify-content-center align-items-center text-center">
+          <h2 class="fw-bold">Experiência</h2>
+          <span class="divider mb-5"></span>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card card_my_experience text-white h-100">
+              <div class="card-body">
+                <p class="card-date">Abr/2024 - Até a presente data</p>
+                <h5 class="card-title mb-2 text-white">
+                  Projeto de Ensino - UFES
+                </h5>
+                <p class="card-text lead">
+                  Desenvolvedor Full Stack <br />Responsável pela criação de um
+                  sistema web de correção automática de exercícios de
+                  programação.
+                </p>
+                <p class="card-text lead">
+                  <strong>Stacks:</strong> Angular, Typescript, Django, HTML,
+                  CSS, BootStrap
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 (pode adicionar mais cards aqui) -->
+          <div class="col">
+            <div class="card card_my_experience text-white h-100">
+              <div class="card-body">
+                <p class="card-date">Mai/2024 - Até a presente data</p>
+                <h6 class="card-title mb-2 text-white">IUPI</h6>
+                <p class="card-text lead">
+                  Estagiário <br />Desenvolvedor web de Front-End com Quasar
+                  framework.
+                </p>
+                <p class="card-text lead">
+                  <strong>Stacks:</strong> Vue, Typescript, Quasar Framework.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card_my_experience text-white h-100">
+              <div class="card-body">
+                <p class="card-date">Jul/2023 - Mar/2024</p>
+                <h5 class="card-title mb-2 text-white">
+                  Iniciação Científica - UFES
+                </h5>
+                <p class="card-text lead">
+                  Desenvolvedor Full Stack <br />Responsável pelo
+                  desenvolvimento de algoritmo para a coleta de dados de sensor
+                  óptico, desenvolvimento de uma aplicação Django com API e
+                  construção de dashboard.
+                </p>
+                <p class="card-text lead">
+                  <strong>Stacks:</strong> Django, JavaScript, HTML, CSS,
+                  BootStrap
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card_my_experience text-white h-100">
+              <div class="card-body">
+                <p class="card-date">Jul/2023 - Mar/2024</p>
+                <h5 class="card-title mb-2 text-white">
+                  EVA Projeto de Extensão - UFES
+                </h5>
+                <p class="card-text lead">
+                  Suporte TI <br />Responsável pela manutençao do site e suporte
+                  técnico do laboratório.
+                </p>
+                <p class="card-text lead">
+                  <strong>Stacks:</strong> WordPress, HTML, CSS
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+		<!-- <section id="porfolio">
 			<div class="container">
 				<div class="row justify-content-center align-items-center text-center">
-					<h1 class="fw-bold">O que eu faço</h1>
+					<h2 class="fw-bold">Portfólio</h2>
 					<span class="divider mb-5"></span>
 				</div>
-				<div class="row row-cols-1 row-cols-md-2 g-4">
-					<!-- Card 1 -->
-					<div class="col">
-						<div class="card card_my_experience text-white h-100">
-							<div class="card-body">
-								<p class="card-date">Abr/2024 - Até a presente data</p>
-								<h5 class="card-title mb-2 text-white">Projeto de Ensino - UFES</h5>
-								<p class="card-text lead">
-									Desenvolvedor Full Stack <br />Responsável pela criação de um sistema web de correção automática de exercícios de programação.
-								</p>
-								<p class="card-text lead"><strong>Stacks:</strong> Angular, Typescript, Django, HTML, CSS, BootStrap</p>
-							</div>
-						</div>
-					</div>
-					<!-- Card 2 (pode adicionar mais cards aqui) -->
-					<div class="col">
-						<div class="card card_my_experience text-white h-100">
-							<div class="card-body">
-								<p class="card-date">Mai/2024 - Até a presente data</p>
-								<h6 class="card-title mb-2 text-white">IUPI</h6>
-								<p class="card-text lead">
-									Estagiário <br />Desenvolvedor web de Front-End com Quasar framework.
-								</p>
-								<p class="card-text lead"><strong>Stacks:</strong> Vue, Typescript, Quasar Framework.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card card_my_experience text-white h-100">
-							<div class="card-body">
-								<p class="card-date">Jul/2023 - Mar/2024</p>
-								<h5 class="card-title mb-2 text-white">Iniciação Científica - UFES</h5>
-								<p class="card-text lead">
-									Desenvolvedor Full Stack <br />Responsável pelo desenvolvimento de algoritmo para a coleta de dados de sensor óptico, desenvolvimento de uma aplicação Django com API e construção de dashboard.
-								</p>
-								<p class="card-text lead"><strong>Stacks:</strong> Django, JavaScript, HTML, CSS, BootStrap</p>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card card_my_experience text-white h-100">
-							<div class="card-body">
-								<p class="card-date">Jul/2023 - Mar/2024</p>
-								<h5 class="card-title mb-2 text-white"> EVA Projeto de Extensão - UFES</h5>
-								<p class="card-text lead">
-									Suporte TI <br />Responsável pela manutençao do site e suporte técnico do laboratório.
-								</p>
-								<p class="card-text lead"><strong>Stacks:</strong> WordPress, HTML, CSS</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
+			<div class="maintence">
+				<h2>Em construção</h2>
+				<i class="fas fa-cog"></i>
 			</div>
-		</section>
-		
+			</div>
+		</section> -->
+
+    <section id="contact" class="py-5">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <h2 class="fw-bold">Entre em contato comigo</h2>
+          <span class="divider mb-4"></span>
+          <p class="lead mb-5">
+            Estou disponível para discussões sobre projetos ou oportunidades.
+            Sinta-se à vontade para entrar em contato.
+          </p>
+        </div>
+        <div class="row justify-content-center text-center">
+          <div class="col-md-6 mb-4">
+            <p><i class="fab fa-whatsapp"></i> (28) 99953-1999 (Whatsapp)</p>
+            <p><i class="far fa-envelope"></i> julliepaper@gmail.com</p>
+          </div>
+          <div class="col-md-6 mb-4">
+            <h4 class="fw-bold">FALE COMIGO</h4>
+            <a
+              href="https://api.whatsapp.com/send?phone=28999531-999&amp;text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
+              class="btn btn-gradient btn-lg"
+              >Enviar via WhatsApp</a
+            >
+          </div>
+        </div>
+
+        <div class="row justify-content-center text-center mb-4">
+          <div class="col-md-12">
+            <h4 class="fw-bold">Siga-me nas redes sociais</h4>
+          </div>
+          <div class="col-md-12">
+            <a
+              href="https://github.com/jcquadros"
+              class="mx-2"
+              target="_blank"
+              aria-label="Github"
+            >
+              <i class="fab fa-github fa-2x"></i>
+            </a>
+            <a
+              href="https://instagram.com/julliequadros"
+              class="mx-2"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jullie-quadros-726269250/"
+              class="mx-2"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+	</main>
+    <footer class="text-light">
+      <div class="container d-flex justify-content-center align-items-center">
+        <!-- Direitos autorais -->
+        <div class="text-center">
+          <p>&copy; 2024 Jullie Quadros. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
