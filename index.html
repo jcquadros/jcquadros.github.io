@@ -25,7 +25,10 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="text-white">
-    <nav id="nav" class="navbar navbar-expand-lg navbar-dark shadow-5-strong fixed-top">
+    <nav
+      id="nav"
+      class="navbar navbar-expand-lg navbar-dark shadow-5-strong fixed-top"
+    >
       <div class="container">
         <a class="navbar-brand fw-bold" href="#hero">Jullie Quadros</a>
         <button
@@ -65,10 +68,10 @@
         </div>
       </div>
     </nav>
-		<main data-bs-spy="scroll" data-bs-target="#nav">
+
     <header
       id="hero"
-      class="hero d-flex flex-column align-items-center justify-content-center"
+      class="hero d-flex flex-column align-items-center justify-content-center text-center text-md-start"
       style="height: 100vh"
     >
       <div class="container text-center">
@@ -77,10 +80,10 @@
           alt="Textura"
           class="textura-overlay"
         />
-        <div class="row">
+        <div class="row align-items-center flex-wrap">
           <!-- Coluna de texto -->
           <div
-            class="col-lg-8 text-lg-start text-center my-4 d-flex flex-column justify-content-center"
+            class="col-12 col-md-6 text-center text-md-start my-4 d-flex flex-column justify-content-center"
           >
             <h1 class="hero-title">Bem-vindo</h1>
             <h2 class="typing-container" id="typingText"></h2>
@@ -89,7 +92,7 @@
               web personalizadas e otimizadas para atender às necessidades de
               empresas e indivíduos.
             </p>
-            <div class="d-flex">
+            <div class="d-flex justify-content-center justify-content-md-start">
               <a href="#contact" class="btn btn-primary btn-lg px-5"
                 >Contate-me</a
               >
@@ -99,12 +102,12 @@
             </div>
           </div>
           <!-- Coluna de imagem -->
-          <div class="col-lg-4 text-center my-4">
+          <div class="col-12 col-md-6 text-center my-4">
             <img
               src="assets/avatar.png"
               alt="Minha Foto"
               class="img-fluid rounded-circle hero-image"
-              style="max-width: 250px"
+              style="max-width: 200px"
             />
           </div>
         </div>
@@ -122,8 +125,8 @@
       </div>
     </header>
 
-    <section id="about">
-      <div class="container">
+		<section id="about" >
+      <div class="container mb-5">
         <div class="row justify-content-center align-items-center text-center">
           <h2 class="fw-bold">Sobre mim</h2>
           <span class="divider mb-5"></span>
@@ -165,6 +168,7 @@
                 title="WhatsApp"
                 href="https://api.whatsapp.com/send?phone=28999531-999&amp;text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
                 type="submit"
+								style="display: block; margin-bottom: 20px;"
                 >Enviar via WhatsApp</a
               >
             </ul>
@@ -173,145 +177,154 @@
       </div>
     </section>
 
-    <section id="what-i-do">
-      <div class="container">
-        <div class="row justify-content-center align-items-center text-center">
-          <h2 class="fw-bold">O que eu faço</h2>
-          <span class="divider mb-5"></span>
-        </div>
-        <div class="row">
-          <!-- Card 2 -->
-          <div class="col-md-6">
-            <div class="featured-box style-3 mb-5">
-              <div class="featured-box-icon">
-                <i class="fas fa-paint-brush"></i>
-              </div>
-              <div class="featured-box-content">
-                <h3 class="text-white">Design de Interfaces</h3>
-                <p class="text-white-50 mb-0">
-                  Criação de designs intuitivos e atraentes no Figma, focando na
-                  experiência do usuário e na estética visual.
-                </p>
+    <main>
+      <section id="what-i-do">
+        <div class="container py-5">
+          <div
+            class="row justify-content-center align-items-center text-center"
+          >
+            <h2 class="fw-bold">O que eu faço</h2>
+            <span class="divider mb-5"></span>
+          </div>
+          <div class="row">
+            <!-- Card 1: Design de Interfaces -->
+            <div class="col-md-6 mb-4">
+              <div class="d-flex align-items-start">
+                <div class="icon-box bg-purple text-white p-3 me-3">
+                  <i class="fas fa-paint-brush fa-2x"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h3 class="text-white">Design de Interfaces</h3>
+                  <p class="text-white-50">
+                    Criação de designs intuitivos e atraentes no Figma, focando
+                    na experiência do usuário e na estética visual.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Card 3 -->
-          <div class="col-md-6">
-            <div class="featured-box style-3 mb-5">
-              <div class="featured-box-icon"><i class="fas fa-code"></i></div>
-              <div class="featured-box-content">
-                <h3 class="text-white">Desenvolvimento Web Completo</h3>
-                <p class="text-white-50 mb-0">
-                  Construção de websites completos, atraentes e responsivos.
-                </p>
+            <!-- Card 2: Desenvolvimento Web Completo -->
+            <div class="col-md-6 mb-4">
+              <div class="d-flex align-items-start">
+                <div class="icon-box bg-purple text-white p-3 me-3">
+                  <i class="fas fa-code fa-2x"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h3 class="text-white">Desenvolvimento Web Completo</h3>
+                  <p class="text-white-50">
+                    Construção de websites completos, atraentes e responsivos.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Card 4 -->
-          <div class="col-md-6">
-            <div class="featured-box style-3 mb-5">
-              <div class="featured-box-icon"><i class="fas fa-rocket"></i></div>
-              <div class="featured-box-content">
-                <h3 class="text-white">Desenvolvimento de Landing Pages</h3>
-                <p class="text-white-50 mb-0">
-                  Elaboração de landing pages atrativas e eficazes que convertem
-                  visitantes em clientes, utilizando práticas de design
-                  otimizadas.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="py-5">
-      <div class="container">
-        <div class="row justify-content-center align-items-center text-center">
-          <h2 class="fw-bold">Experiência</h2>
-          <span class="divider mb-5"></span>
-        </div>
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-          <!-- Card 1 -->
-          <div class="col">
-            <div class="card card_my_experience text-white h-100">
-              <div class="card-body">
-                <p class="card-date">Abr/2024 - Até a presente data</p>
-                <h5 class="card-title mb-2 text-white">
-                  Projeto de Ensino - UFES
-                </h5>
-                <p class="card-text lead">
-                  Desenvolvedor Full Stack <br />Responsável pela criação de um
-                  sistema web de correção automática de exercícios de
-                  programação.
-                </p>
-                <p class="card-text lead">
-                  <strong>Stacks:</strong> Angular, Typescript, Django, HTML,
-                  CSS, BootStrap
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Card 2 (pode adicionar mais cards aqui) -->
-          <div class="col">
-            <div class="card card_my_experience text-white h-100">
-              <div class="card-body">
-                <p class="card-date">Mai/2024 - Até a presente data</p>
-                <h6 class="card-title mb-2 text-white">IUPI</h6>
-                <p class="card-text lead">
-                  Estagiário <br />Desenvolvedor web de Front-End com Quasar
-                  framework.
-                </p>
-                <p class="card-text lead">
-                  <strong>Stacks:</strong> Vue, Typescript, Quasar Framework.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card card_my_experience text-white h-100">
-              <div class="card-body">
-                <p class="card-date">Jul/2023 - Mar/2024</p>
-                <h5 class="card-title mb-2 text-white">
-                  Iniciação Científica - UFES
-                </h5>
-                <p class="card-text lead">
-                  Desenvolvedor Full Stack <br />Responsável pelo
-                  desenvolvimento de algoritmo para a coleta de dados de sensor
-                  óptico, desenvolvimento de uma aplicação Django com API e
-                  construção de dashboard.
-                </p>
-                <p class="card-text lead">
-                  <strong>Stacks:</strong> Django, JavaScript, HTML, CSS,
-                  BootStrap
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card card_my_experience text-white h-100">
-              <div class="card-body">
-                <p class="card-date">Jul/2023 - Mar/2024</p>
-                <h5 class="card-title mb-2 text-white">
-                  EVA Projeto de Extensão - UFES
-                </h5>
-                <p class="card-text lead">
-                  Suporte TI <br />Responsável pela manutençao do site e suporte
-                  técnico do laboratório.
-                </p>
-                <p class="card-text lead">
-                  <strong>Stacks:</strong> WordPress, HTML, CSS
-                </p>
+            <!-- Card 3: Desenvolvimento de Landing Pages -->
+            <div class="col-md-6 mb-4">
+              <div class="d-flex align-items-start">
+                <div class="icon-box bg-purple text-white p-3 me-3">
+                  <i class="fas fa-rocket fa-2x"></i>
+                </div>
+                <div class="flex-grow-1">
+                  <h3 class="text-white">Desenvolvimento de Landing Pages</h3>
+                  <p class="text-white-50">
+                    Elaboração de landing pages atrativas e eficazes que
+                    convertem visitantes em clientes, utilizando práticas de
+                    design otimizadas.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-		<!-- <section id="porfolio">
+      <section id="experience" class="py-5">
+        <div class="container">
+          <div
+            class="row justify-content-center align-items-center text-center"
+          >
+            <h2 class="fw-bold">Experiência</h2>
+            <span class="divider mb-5"></span>
+          </div>
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <!-- Card 1 -->
+            <div class="col">
+              <div class="card card_my_experience text-white h-100">
+                <div class="card-body">
+                  <p class="card-date">Abr/2024 - Até a presente data</p>
+                  <h5 class="card-title mb-2 text-white">
+                    Projeto de Ensino - UFES
+                  </h5>
+                  <p class="card-text lead">
+                    Desenvolvedor Full Stack <br />Responsável pela criação de
+                    um sistema web de correção automática de exercícios de
+                    programação.
+                  </p>
+                  <p class="card-text lead">
+                    <strong>Stacks:</strong> Angular, Typescript, Django, HTML,
+                    CSS, BootStrap
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 (pode adicionar mais cards aqui) -->
+            <div class="col">
+              <div class="card card_my_experience text-white h-100">
+                <div class="card-body">
+                  <p class="card-date">Mai/2024 - Até a presente data</p>
+                  <h6 class="card-title mb-2 text-white">IUPI</h6>
+                  <p class="card-text lead">
+                    Estagiário <br />Desenvolvedor web de Front-End com Quasar
+                    framework.
+                  </p>
+                  <p class="card-text lead">
+                    <strong>Stacks:</strong> Vue, Typescript, Quasar Framework.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card card_my_experience text-white h-100">
+                <div class="card-body">
+                  <p class="card-date">Jul/2023 - Mar/2024</p>
+                  <h5 class="card-title mb-2 text-white">
+                    Iniciação Científica - UFES
+                  </h5>
+                  <p class="card-text lead">
+                    Desenvolvedor Full Stack <br />Responsável pelo
+                    desenvolvimento de algoritmo para a coleta de dados de
+                    sensor óptico, desenvolvimento de uma aplicação Django com
+                    API e construção de dashboard.
+                  </p>
+                  <p class="card-text lead">
+                    <strong>Stacks:</strong> Django, JavaScript, HTML, CSS,
+                    BootStrap
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card card_my_experience text-white h-100">
+                <div class="card-body">
+                  <p class="card-date">Jul/2023 - Mar/2024</p>
+                  <h5 class="card-title mb-2 text-white">
+                    EVA Projeto de Extensão - UFES
+                  </h5>
+                  <p class="card-text lead">
+                    Suporte TI <br />Responsável pela manutençao do site e
+                    suporte técnico do laboratório.
+                  </p>
+                  <p class="card-text lead">
+                    <strong>Stacks:</strong> WordPress, HTML, CSS
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section id="porfolio">
 			<div class="container">
 				<div class="row justify-content-center align-items-center text-center">
 					<h2 class="fw-bold">Portfólio</h2>
@@ -324,65 +337,68 @@
 			</div>
 		</section> -->
 
-    <section id="contact" class="py-5">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <h2 class="fw-bold">Entre em contato comigo</h2>
-          <span class="divider mb-4"></span>
-          <p class="lead mb-5">
-            Estou disponível para discussões sobre projetos ou oportunidades.
-            Sinta-se à vontade para entrar em contato.
-          </p>
-        </div>
-        <div class="row justify-content-center text-center">
-          <div class="col-md-6 mb-4">
-            <p><i class="fab fa-whatsapp"></i> (28) 99953-1999 (Whatsapp)</p>
-            <p><i class="far fa-envelope"></i> julliepaper@gmail.com</p>
+      <section id="contact" class="py-5">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <h2 class="fw-bold">Entre em contato comigo</h2>
+            <span class="divider mb-4"></span>
+            <p class="lead mb-5">
+              Estou disponível para discussões sobre projetos ou oportunidades.
+              Sinta-se à vontade para entrar em contato.
+            </p>
           </div>
-          <div class="col-md-6 mb-4">
-            <h4 class="fw-bold">FALE COMIGO</h4>
-            <a
-              href="https://api.whatsapp.com/send?phone=28999531-999&amp;text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
-              class="btn btn-gradient btn-lg"
-              >Enviar via WhatsApp</a
-            >
+          <div class="row justify-content-center text-center">
+            <div class="col-md-6 mb-4">
+              <p><i class="fab fa-whatsapp"></i> (28) 99953-1999 (Whatsapp)</p>
+              <p><i class="far fa-envelope"></i> julliepaper@gmail.com</p>
+            </div>
+            <div class="col-md-6 mb-4">
+              <h4 class="fw-bold">FALE COMIGO</h4>
+              <a
+                href="https://api.whatsapp.com/send?phone=28999531-999&amp;text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
+                class="btn btn-gradient btn-lg"
+                >Enviar via WhatsApp</a
+              >
+            </div>
           </div>
-        </div>
 
-        <div class="row justify-content-center text-center mb-4">
-          <div class="col-md-12">
-            <h4 class="fw-bold">Siga-me nas redes sociais</h4>
-          </div>
-          <div class="col-md-12">
-            <a
-              href="https://github.com/jcquadros"
-              class="mx-2"
-              target="_blank"
-              aria-label="Github"
-            >
-              <i class="fab fa-github fa-2x"></i>
-            </a>
-            <a
-              href="https://instagram.com/julliequadros"
-              class="mx-2"
-              target="_blank"
-              aria-label="Instagram"
-            >
-              <i class="fab fa-instagram fa-2x"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/jullie-quadros-726269250/"
-              class="mx-2"
-              target="_blank"
-              aria-label="LinkedIn"
-            >
-              <i class="fab fa-linkedin fa-2x"></i>
-            </a>
+          <div class="row justify-content-center text-center mb-4">
+            <div class="col-md-12">
+              <h4 class="fw-bold">Siga-me nas redes sociais</h4>
+            </div>
+            <div class="col-md-12">
+              <a
+                href="https://github.com/jcquadros"
+                class="mx-2"
+                target="_blank"
+                aria-label="Github"
+                style="text-decoration: none"
+              >
+                <i class="fab fa-github fa-2x"></i>
+              </a>
+              <a
+                href="https://instagram.com/julliequadros"
+                class="mx-2"
+                target="_blank"
+                aria-label="Instagram"
+                style="text-decoration: none"
+              >
+                <i class="fab fa-instagram fa-2x"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jullie-quadros-726269250/"
+                class="mx-2"
+                target="_blank"
+                aria-label="LinkedIn"
+                style="text-decoration: none"
+              >
+                <i class="fab fa-linkedin fa-2x"></i>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-	</main>
+      </section>
+    </main>
     <footer class="text-light">
       <div class="container d-flex justify-content-center align-items-center">
         <!-- Direitos autorais -->

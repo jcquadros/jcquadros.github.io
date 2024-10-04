@@ -56,7 +56,7 @@ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 .hero {
   min-height: 100vh;
   padding: 50px 0;
-  /* background-image: url(../assets/hero.jpg); */
+  padding-bottom: 100px;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -74,6 +74,34 @@ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   box-shadow: 30px 0px 100px rgba(255, 136, 143, 0.5),
     -30px 0px 100px rgba(60, 109, 217, 0.5);
 }
+
+/* Responsividade no hero */
+.hero .row {
+  flex-wrap: wrap;
+}
+
+.hero-title {
+  font-size: 2rem; /* Ajuste para telas menores */
+}
+
+.typing-container {
+  font-size: 1.5rem; /* Redução do tamanho em dispositivos móveis */
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero .lead {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    max-width: 150px;
+  }
+}
+
 
 .typing-container {
   display: inline;
@@ -124,6 +152,7 @@ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   font-size: 20px;
   text-align: center;
   color: #fff;
+  
 }
 
 .hero-title {
@@ -200,6 +229,8 @@ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center; /* Alinha o conteúdo horizontalmente ao centro */
   align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+  margin-top: 100px; /* Cria espaço entre a seta e a próxima seção */
+  padding: 60px 0;
 }
 
 #about p.lead {
@@ -262,20 +293,14 @@ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .featured-box-icon {
-  margin-right: 15px;
   height: 60px;
   width: 60px;
-  line-height: 60px;
   font-size: 30px;
   text-align: center;
   color: var(--light-background);
   background-color: var(--primary);
   border-radius: 50%;
   box-shadow: 0 4px 15px var(--primary);
-}
-
-.featured-box-content {
-  flex: 1; 
 }
 
 #contact .fab {
@@ -312,5 +337,80 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: transparent;
+  margin-top: 100px; /* Cria espaço entre a seta e a próxima seção */
+  padding: 60px 0;
+}
+
+.bg-purple {
+  background-color: var(--primary); /* Fundo roxo */
+  box-shadow: 0 4px 15px var(--primary); /* Sombra roxa */
+}
+
+.icon-box {
+  border-radius: 50%; /* Deixa o ícone com um formato arredondado */
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo padrão para o header */
+.hero-title {
+  font-size: 2rem; /* Tamanho grande padrão para desktops */
+}
+
+.typing-container {
+  font-size: 3rem; /* Tamanho padrão para animação de texto */
+}
+
+/* Botões */
+.btn-lg {
+  font-size: 1.25rem; /* Tamanho padrão dos botões */
+  padding: 0.75rem 1.5rem; /* Tamanho padrão do padding dos botões */
+}
+
+/* Ajuste para telas menores (móveis e tablets) */
+@media (max-width: 768px) {
+  /* Diminui o tamanho da fonte do título "Bem-vindo" */
+  .hero-title {
+    font-size: 1.5rem; /* Reduz o tamanho da fonte para telas menores */
+  }
+
+  /* Diminui o tamanho da fonte da animação de digitação */
+  .typing-container {
+    font-size: 2rem; /* Reduz o tamanho da fonte da animação de digitação */
+  }
+
+  .btn-lg {
+    font-size: 0.875rem; /* Reduz o tamanho do texto dos botões */
+    padding: 0.5rem 1rem; /* Reduz o padding dos botões */
+    white-space: nowrap; /* Impede que o texto quebre em uma nova linha */
+    display: flex; /* Alinha os botões horizontalmente */
+    justify-content: center; /* Alinha os botões horizontalmente */
+    align-items: center; /* Alinha os botões verticalmente */
+  }
+}
+
+/* Ajuste adicional para telas extra pequenas */
+@media (max-width: 576px) {
+  /* Diminui ainda mais o título e a animação de digitação */
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .typing-container {
+    font-size: 1.25rem;
+  }
+
+  .btn-lg {
+    font-size: 0.75rem; /* Diminui ainda mais o tamanho do texto dos botões */
+    padding: 0.4rem 0.8rem; /* Reduz o padding dos botões */
+    white-space: nowrap; /* Impede que o texto quebre em uma nova linha */
+    display: flex; /* Alinha os botões horizontalmente */
+    justify-content: center; /* Alinha os botões horizontalmente */
+    align-items: center; /* Alinha os botões verticalmente */
+  }
 }
 
