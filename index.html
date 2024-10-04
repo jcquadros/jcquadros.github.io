@@ -1,74 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="text-white">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="text-white">
     <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Jullie Quadros</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="mx-auto"> <!-- Centraliza as opções -->
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" aria-current="page" href="#" style="border-radius: 50px;">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Sobre</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Serviços</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Portfólio</a>
-                        </li>
-                    </ul>
-                </div>
-                <a class="btn btn-gradient ms-3 btn-lg" href="#">Contato</a> <!-- Botão Contato à direita -->
-            </div>
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Jullie Quadros</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mx-auto">
+            <!-- Centraliza as opções -->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white"
+                  aria-current="page"
+                  href="#"
+                  style="border-radius: 50px"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#about">Sobre</a>
+              </li>
+							<li class="nav-item">
+								<a class="nav-link text-white" href="#what-i-do">O que eu faço</a>
+							</li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Serviços</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Portfólio</a>
+              </li>
+            </ul>
+          </div>
+          <a class="btn btn-gradient ms-3 btn-lg" href="#">Contato</a>
+          <!-- Botão Contato à direita -->
         </div>
+      </div>
     </nav>
-    
 
-    <header class="hero d-flex flex-column align-items-center justify-content-center" style="height: 100vh;">
-        <div class="container text-center">
-            <img src="assets/bg-gradient-img.svg" alt="Textura" class="textura-overlay" />
-            <div class="row">
-                <!-- Coluna de texto -->
-                <div class="col-lg-8 text-lg-start text-center my-4 d-flex flex-column justify-content-center">
-                    <h2 class="hero-title fz">Bem-vindo</h2>
-                    <h3 class="typing-container" id="typingText"></h3>
-                    <p class="hero-description mt-3">
-                        Olá, sou Jullie, desenvolvedora web em formação. Crio aplicações web personalizadas e otimizadas para atender às necessidades de empresas e indivíduos.
-                    </p>
-                    <div class="d-flex">
-                        <a href="#contato" class="btn btn-primary btn-lg px-5" >Contate-me</a>
-                        <a href="#sobre" class="btn btn-gradient btn-lg px-5 ms-3" >Sobre mim</a>
-                    </div>
-                </div>
-                <!-- Coluna de imagem -->
-                <div class="col-lg-4 text-center my-4">
-                    <img src="assets/avatar.png" alt="Minha Foto" class="img-fluid rounded-circle hero-image" style="max-width: 250px;">
-                </div>
+    <header
+      class="hero d-flex flex-column align-items-center justify-content-center"
+      style="height: 100vh"
+    >
+      <div class="container text-center">
+        <img
+          src="assets/bg-gradient-img.svg"
+          alt="Textura"
+          class="textura-overlay"
+        />
+        <div class="row">
+          <!-- Coluna de texto -->
+          <div
+            class="col-lg-8 text-lg-start text-center my-4 d-flex flex-column justify-content-center"
+          >
+            <h2 class="hero-title">Bem-vindo</h2>
+            <h3 class="typing-container" id="typingText"></h3>
+            <p class="lead my-4">
+              Olá, sou Jullie, desenvolvedora web em formação. Crio aplicações
+              web personalizadas e otimizadas para atender às necessidades de
+              empresas e indivíduos.
+            </p>
+            <div class="d-flex">
+              <a href="#contato" class="btn btn-primary btn-lg px-5"
+                >Contate-me</a
+              >
+              <a href="#sobre" class="btn btn-gradient btn-lg px-5 ms-3"
+                >Sobre mim</a
+              >
             </div>
-            <!-- Setinha para rolar a página -->
-            <a href="#about" alt="sobre" title="sobre" class="scroll-down-arrow text-white smooth-scroll">
-                <span class="animated"><i class="fa fa-chevron-down fa-fade"></i></span>
-            </a>
+          </div>
+          <!-- Coluna de imagem -->
+          <div class="col-lg-4 text-center my-4">
+            <img
+              src="assets/avatar.png"
+              alt="Minha Foto"
+              class="img-fluid rounded-circle hero-image"
+              style="max-width: 250px"
+            />
+          </div>
         </div>
+        <!-- Setinha para rolar a página -->
+        <a
+          href="#about"
+          alt="sobre"
+          title="sobre"
+          class="scroll-down-arrow text-white smooth-scroll"
+        >
+          <span class="animated"
+            ><i class="fa fa-chevron-down fa-fade"></i
+          ></span>
+        </a>
+      </div>
     </header>
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <section id="about">
+      <div class="container">
+        <div class="row justify-content-center align-items-center text-center">
+          <h1 class="fw-bold">Sobre mim</h1>
+					<span class="divider mb-5"></span>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 d-flex flex-column justify-content-center">
+            <p class="lead">
+              Olá, sou Jullie Quadros, desenvolvedora web em formação.
+              Atualmente, estou cursando Engenharia de Computação na
+              Universidade Federal do Espírito Santo e me especializando em
+              desenvolvimento web.
+              <br /><br />
+              Meu objetivo é criar aplicações web personalizadas e otimizadas
+              para atender às necessidades de empresas e indivíduos.
+              <br /><br />
+              Estou sempre em busca de novos desafios e oportunidades para
+              aprimorar minhas habilidades e conhecimentos.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <strong>Nome:</strong> Jullie Quadros
+              </li>
+              <li class="list-group-item">
+                <strong>Email:</strong>
+                <a href="mailto:julliepaper@gmail.com" id="mailto"
+                  >julliepaper@gmail.com</a
+                >
+              </li>
+              <li class="list-group-item"><strong>Idade:</strong> 20 anos</li>
+              <!-- <li class="list-group-item"><strong>CNPJ:</strong> 33.858.376/0001-90</li> -->
+              <li class="list-group-item mb-3">
+                <strong>De:</strong> Serra, Espírito Santo
+              </li>
+              <a
+                target="_blank"
+                class="btn btn-gradient btn-lg"
+                title="WhatsApp"
+                href="https://api.whatsapp.com/send?phone=28999531-999&amp;text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"
+                type="submit"
+                >Enviar via WhatsApp</a
+              >
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+		<section id="what-i-do" class="py-5">
+			<div class="container">
+				<div class="row justify-content-center align-items-center text-center">
+					<h1 class="fw-bold">O que eu faço</h1>
+					<span class="divider mb-5"></span>
+				</div>
+				<div class="row row-cols-1 row-cols-md-2 g-4">
+					<!-- Card 1 -->
+					<div class="col">
+						<div class="card card_my_experience text-white h-100">
+							<div class="card-body">
+								<p class="card-date">Abr/2024 - Até a presente data</p>
+								<h5 class="card-title mb-2 text-white">Projeto de Ensino - UFES</h5>
+								<p class="card-text lead">
+									Desenvolvedor Full Stack <br />Responsável pela criação de um sistema web de correção automática de exercícios de programação.
+								</p>
+								<p class="card-text lead"><strong>Stacks:</strong> Angular, Typescript, Django, HTML, CSS, BootStrap</p>
+							</div>
+						</div>
+					</div>
+					<!-- Card 2 (pode adicionar mais cards aqui) -->
+					<div class="col">
+						<div class="card card_my_experience text-white h-100">
+							<div class="card-body">
+								<p class="card-date">Mai/2024 - Até a presente data</p>
+								<h6 class="card-title mb-2 text-white">IUPI</h6>
+								<p class="card-text lead">
+									Estagiário <br />Desenvolvedor web de Front-End com Quasar framework.
+								</p>
+								<p class="card-text lead"><strong>Stacks:</strong> Vue, Typescript, Quasar Framework.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card card_my_experience text-white h-100">
+							<div class="card-body">
+								<p class="card-date">Jul/2023 - Mar/2024</p>
+								<h5 class="card-title mb-2 text-white">Iniciação Científica - UFES</h5>
+								<p class="card-text lead">
+									Desenvolvedor Full Stack <br />Responsável pelo desenvolvimento de algoritmo para a coleta de dados de sensor óptico, desenvolvimento de uma aplicação Django com API e construção de dashboard.
+								</p>
+								<p class="card-text lead"><strong>Stacks:</strong> Django, JavaScript, HTML, CSS, BootStrap</p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card card_my_experience text-white h-100">
+							<div class="card-body">
+								<p class="card-date">Jul/2023 - Mar/2024</p>
+								<h5 class="card-title mb-2 text-white"> EVA Projeto de Extensão - UFES</h5>
+								<p class="card-text lead">
+									Suporte TI <br />Responsável pela manutençao do site e suporte técnico do laboratório.
+								</p>
+								<p class="card-text lead"><strong>Stacks:</strong> WordPress, HTML, CSS</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
