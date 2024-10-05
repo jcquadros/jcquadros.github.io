@@ -371,27 +371,7 @@ footer{
   padding: 0.75rem 1.5rem; /* Tamanho padrão do padding dos botões */
 }
 
-/* Ajuste para telas menores (móveis e tablets) */
-@media (max-width: 768px) {
-  /* Diminui o tamanho da fonte do título "Bem-vindo" */
-  .hero-title {
-    font-size: 1.5rem; /* Reduz o tamanho da fonte para telas menores */
-  }
 
-  /* Diminui o tamanho da fonte da animação de digitação */
-  .typing-container {
-    font-size: 2rem; /* Reduz o tamanho da fonte da animação de digitação */
-  }
-
-  .btn-lg {
-    font-size: 0.875rem; /* Reduz o tamanho do texto dos botões */
-    padding: 0.5rem 1rem; /* Reduz o padding dos botões */
-    white-space: nowrap; /* Impede que o texto quebre em uma nova linha */
-    display: flex; /* Alinha os botões horizontalmente */
-    justify-content: center; /* Alinha os botões horizontalmente */
-    align-items: center; /* Alinha os botões verticalmente */
-  }
-}
 
 /* Ajuste adicional para telas extra pequenas */
 @media (max-width: 576px) {
@@ -414,3 +394,71 @@ footer{
   }
 }
 
+.portfolio-image {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.portfolio-image:hover {
+  transform: scale(1.05);
+}
+
+.modal-body img {
+  width: 100%;
+  height: auto;
+}
+
+.modal-content {
+  background-color: #484963;
+  color: #c5c8ec;
+  text-align: justify;
+}
+
+
+.modal-header {
+  border-bottom: none;
+  padding: 50px;
+  padding-bottom: 0;
+  }
+
+.modal-dialog{
+  max-width: 800px;
+}
+
+.modal-title {
+  color:white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 50px;
+  padding-top: 10px;
+}
+
+
+/* Ajuste para telas menores (móveis e tablets) */
+@media (max-width: 768px) {
+  /* Diminui o tamanho da fonte do título "Bem-vindo" */
+  .hero-title {
+    font-size: 1.5rem; /* Reduz o tamanho da fonte para telas menores */
+  }
+
+  /* Diminui o tamanho da fonte da animação de digitação */
+  .typing-container {
+    font-size: 2rem; /* Reduz o tamanho da fonte da animação de digitação */
+  }
+
+  .btn-lg {
+    font-size: 0.875rem; /* Reduz o tamanho do texto dos botões */
+    padding: 0.5rem 1rem; /* Reduz o padding dos botões */
+    white-space: nowrap; /* Impede que o texto quebre em uma nova linha */
+    display: flex; /* Alinha os botões horizontalmente */
+    justify-content: center; /* Alinha os botões horizontalmente */
+    align-items: center; /* Alinha os botões verticalmente */
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+  }
+}
