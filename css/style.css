@@ -225,7 +225,7 @@ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 #about {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center; /* Alinha o conteúdo horizontalmente ao centro */
   align-items: center; /* Alinha o conteúdo verticalmente ao centro */
@@ -460,4 +460,12 @@ footer{
   .modal-title {
     font-size: 1.5rem;
   }
+}
+
+.my_icon {
+  transition: transform 0.3s;
+}
+
+.my_icon:hover {
+  transform: scale(1.1);
 }
